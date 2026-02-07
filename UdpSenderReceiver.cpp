@@ -20,7 +20,7 @@ void UdpSenderReceiver::send_data(char *data, int size)
 
 
 #ifdef __linux__
-udp_sender_receiver::udp_sender_receiver(std::string destination_ip_address, unsigned int udp_port_in, unsigned int udp_port_out)
+UdpSenderReceiver::UdpSenderReceiver(std::string destination_ip_address, unsigned int udp_port_in, unsigned int udp_port_out)
 {
 	struct hostent* h;
 	//check ip adress
@@ -155,7 +155,7 @@ udp_sender_receiver::udp_sender_receiver(std::string destination_ip_address, uns
 //res in linux has to be tested, I accidentially used the buffer_length before, 
 //wich is the max size of the given buffer, not the actual size returned...
 //I mean it still worked, but I used everytime more space
-int osc_controller::udp_sender_receiver::receive_udp_data_raw(char *buffer)	
+int UdpSenderReceiver::receive_data(char *buffer)	
 {
 	struct sockaddr_in sender_address;
 	int sender_address_size = sizeof(sender_address);

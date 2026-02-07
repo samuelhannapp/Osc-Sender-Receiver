@@ -1,12 +1,25 @@
+#ifdef __linux__
+#include "/home/samuel/Osc-Sender-Receiver/OscMessage.hpp"
+#include "/home/samuel/Osc-Sender-Receiver/OscSenderReceiver.hpp"
+#endif
+#ifdef _WIN64
 #include "OscMessage.hpp"
 #include "OscSenderReceiver.hpp"
-
+#endif
 //example:
 
 int main() {
 
 	//Init osc controller with ardour
 	OscSenderReceiver* ardour = new OscSenderReceiver("127.0.0.1", 20, 3819);
+
+	//setup controller type
+	OscMessage setup_msg("/set_surface");
+	setup_msg.PushInt(8);
+	setup_msg.PushInt((1 << 0) | (1 << 1));
+	setup_msg.PushInt((1 << 0) | (1 << 1) | (1 << 13)/* | (1 << MeteringasFloat)*/);
+	setup_msg.PushInt(0b1000);
+	ardour->send_data(setup_msg);
 
 	//build osc message
 	OscMessage test_message("/strip/fader");

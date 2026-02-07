@@ -1,6 +1,6 @@
 #pragma once
 #include "UdpSenderReceiver.hpp"
-#include "oscmessage.hpp"
+#include "OscMessage.hpp"
 class OscSenderReceiver : public UdpSenderReceiver {
 public:
 	using UdpSenderReceiver::UdpSenderReceiver;

@@ -1,7 +1,6 @@
-#include "oscmessage.hpp"
 #include <math.h>
 #include <string.h>
-#include "oscmessage.hpp"
+#include "OscMessage.hpp"
 #include "UdpSenderReceiver.hpp"
 
 

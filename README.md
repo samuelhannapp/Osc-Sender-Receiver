@@ -14,8 +14,6 @@ I believe Osc is supposed to be the way how to control DAW's...
 
 This project is licensed under the MIT license. hekky-osc is also licensed under the MIT license.
 
----
-
 # Example
 
 ```cpp

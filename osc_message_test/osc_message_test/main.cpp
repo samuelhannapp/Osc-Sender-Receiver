@@ -1,11 +1,5 @@
-#ifdef __linux__
-#include "/home/samuel/Osc-Sender-Receiver/OscMessage.hpp"
-#include "/home/samuel/Osc-Sender-Receiver/OscSenderReceiver.hpp"
-#endif
-#ifdef _WIN64
 #include "OscMessage.hpp"
 #include "OscSenderReceiver.hpp"
-#endif
 //example:
 
 int main() {

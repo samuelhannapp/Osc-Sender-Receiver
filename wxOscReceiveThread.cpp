@@ -1,5 +1,5 @@
 #include "wxOscReceiveThread.h"
-#include "oscmessage.hpp"
+#include "OscMessage.hpp"
 
 wxOscReceiveThread::wxOscReceiveThread(wxEvtHandler* handler, OscSenderReceiver* osc_controller_object)
 	: wxThread(wxTHREAD_DETACHED), m_handler(handler)

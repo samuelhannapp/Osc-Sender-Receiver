@@ -14,7 +14,6 @@ wxOscReceiveThread::wxOscReceiveThread(wxEvtHandler* handler, OscSenderReceiver*
 
 wxThread::ExitCode wxOscReceiveThread::Entry()
 {
-	int test = 0;
 	while (1) {
 		OscMessage message(osc_controller->receive_data());
 

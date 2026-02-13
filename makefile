@@ -1,5 +1,5 @@
 libosc.a: OscMessage.o OscSenderReceiver.o UdpSenderReceiver.o wxOscReceiveThread.o 
-	ar rcs -g libosc.a OscMessage.o OscSenderReceiver.o UdpSenderReceiver.o wxOscReceiveThread.o
+	ar rcs libosc.a OscMessage.o OscSenderReceiver.o UdpSenderReceiver.o wxOscReceiveThread.o
 
 OscMessage.o: OscMessage.cpp
 	g++ -g -c OscMessage.cpp -I/home/samuel/Osc-Sender-Receiver

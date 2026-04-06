@@ -1,7 +1,7 @@
 #pragma once
 #include <wx/wx.h>
 #include <wx/thread.h>
-#include <OscSenderReceiver.hpp>
+#include "OscSenderReceiver.hpp"
 
 struct MidiMessage_v2 {
 	char midi_data[120];
